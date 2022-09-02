@@ -1,0 +1,39 @@
+body {
+    background-color: #6e37fa;
+}
+img {
+    width: 300px;
+}
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+.img-wrapper {
+    margin: 160px auto;
+    position: relative;
+    display: inline-block;
+}
+.img-wrapper img {
+    max-width: 130px;
+    display: block;
+    border-radius: 50%;
+}
+.img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -13px;
+    border: 6px solid #ffffff;
+    border-top-color: #ababab00;
+    border-bottom-color: #ababab00;
+    border-radius: 50%;
+    z-index: 50;
+    animation: spin 5s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
